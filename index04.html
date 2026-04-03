@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Agenda Abril 2026</title>
+
+<style>
+body{
+  background:black;
+  color:white;
+  font-family:Arial;
+  padding:20px;
+}
+
+h1{
+  text-align:center;
+  color:gold;
+}
+
+.container{
+  max-width:1200px;
+  margin:auto;
+}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  margin-top:20px;
+}
+
+th{
+  background:gold;
+  color:black;
+  padding:10px;
+}
+
+td{
+  padding:10px;
+  border:1px solid gold;
+  text-align:center;
+}
+
+tr:nth-child(even){
+  background:#111;
+}
+
+.mj{
+  background:yellow !important;
+  color:black;
+  font-weight:bold;
+}
+
+.especial{
+  background:#ffcc00 !important;
+  color:black;
+  font-weight:bold;
+}
+
+input{
+  width:90px;
+  padding:5px;
+  text-align:center;
+  background:#222;
+  color:white;
+  border:1px solid gold;
+}
+
+button{
+  margin-top:15px;
+  padding:12px;
+  background:gold;
+  border:none;
+  cursor:pointer;
+  font-weight:bold;
+}
+
+#resultado{
+  margin-top:20px;
+  font-size:18px;
+  text-align:center;
+  color:#00ff88;
+  font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🎤 Agenda Michael Jackson - Abril 2026</h1>
+
+<button onclick="calcular()">🔥 Calcular Total</button>
+<button onclick="window.print()">📄 Gerar PDF</button>
+
+<div id="resultado"></div>
+
+<table>
+<tr>
+<th>Data</th>
+<th>Dia</th>
+<th>Show</th>
+<th>Valor (R$)</th>
+</tr>
+
+<tr><td>03/04</td><td>Sexta</td><td class="mj">Michael Jackson</td><td><input type="number" class="valor"></td></tr>
+<tr><td>06/04</td><td>Segunda</td><td class="mj">Michael Jackson</td><td><input type="number" class="valor"></td></tr>
+<tr><td>07/04</td><td>Terça</td><td class="mj">Michael Jackson</td><td><input type="number" class="valor"></td></tr>
+<tr><td>10/04</td><td>Sexta</td><td class="mj">Michael Jackson</td><td><input type="number" class="valor"></td></tr>
+
+<tr><td>11/04</td><td>Sábado</td><td class="mj">Michael Jackson</td><td><input type="number" class="valor"></td></tr>
+<tr><td>12/04</td><td>Domingo</td><td class="mj">Michael Jackson</td><td><input type="number" class="valor"></td></tr>
+
+<tr><td>13/04</td><td>Segunda</td><td class="mj">Michael Jackson</td><td><input type="number" class="valor"></td></tr>
+<tr><td>14/04</td><td>Terça</td><td class="mj">Michael Jackson</td><td><input type="number" class="valor"></td></tr>
+<tr><td>17/04</td><td>Sexta</td><td class="mj">Michael Jackson</td><td><input type="number" class="valor"></td></tr>
+
+<tr><td>18/04</td><td>Sábado</td><td class="mj">Michael Jackson</td><td><input type="number" class="valor"></td></tr>
+<tr><td>19/04</td><td>Domingo</td><td class="mj">Michael Jackson</td><td><input type="number" class="valor"></td></tr>
+
+<tr><td>20/04</td><td>Segunda</td><td class="mj">Michael Jackson</td><td><input type="number" class="valor"></td></tr>
+<tr><td>21/04</td><td>Terça</td><td class="mj">Michael Jackson</td><td><input type="number" class="valor"></td></tr>
+
+<tr><td>27/04</td><td>Segunda</td><td class="mj">Michael Jackson</td><td><input type="number" class="valor"></td></tr>
+<tr><td>28/04</td><td>Terça</td><td class="mj">Michael Jackson</td><td><input type="number" class="valor"></td></tr>
+
+<tr class="especial">
+<td>24/04</td>
+<td>Sexta</td>
+<td>🔥 Especial Michael Jackson</td>
+<td><input type="number" class="valor"></td>
+</tr>
+
+</table>
+
+</div>
+
+<script>
+function calcular(){
+  let valores = document.querySelectorAll(".valor");
+  let total = 0;
+
+  valores.forEach(v => {
+    total += Number(v.value) || 0;
+  });
+
+  document.getElementById("resultado").innerHTML =
+    "💰 TOTAL GERAL: R$ " + total.toFixed(2);
+}
+</script>
+
+</body>
+</html>
